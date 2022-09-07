@@ -14,22 +14,15 @@
         </tr>
         <tr>
             <td><input type="text" id="amount"></td>
+
             <td><select id="form">
-                <option id="vnForm" value=1>
-                    Viet Nam
-                </option>
-                <option class="usaForm" value=2>
-                    USA
-                </option>
+                <option id="vnForm" value=1>Viet Nam</option>
+                <option class="usaForm" value=2>USA</option>
             </select></td>
 
             <td><select id="to">
-                <option id="vnTo" value=1>
-                    Viet Nam
-                </option>
-                <option selected id="usaTo" value=2>
-                    USA
-                </option>
+                <option id="vnTo" value=1>VND</option>
+                <option selected id="usaTo" value=2>USA</option>
             </select></td>
             <td>
                 <button type="button" onclick="convert()">Convert</button>
@@ -51,10 +44,10 @@
 
 
         if (selectForm == 1 && selectTo == 2) {
-            result.innerHTML = "Result: " + Number(amount)/24;
+            result.innerHTML = "Result: " + Number(amount)/24 +" $";
         }else
         if (selectForm== 2 && selectTo == 1) {
-            result.innerHTML = "Result: " + Number(amount)*24;
+            result.innerHTML = "Result: " + Number(amount)*24 +" VND";
         }else {
             result.innerHTML = "Result: " + Number(amount);
         }
